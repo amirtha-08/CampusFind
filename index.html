@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusFind helps students report and find lost items on campus.">
+  <title>CampusFind | Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">⌕</span> CampusFind</a>
+    <nav><a href="#browse">Browse items</a><a href="#how">How it works</a><a class="nav-cta" href="#report">Report an item</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR CAMPUS. ONE PLACE TO RECONNECT.</span>
+        <h1>Lost something?<br><em>Let's find it.</em></h1>
+        <p>A simple campus space to report lost belongings, share found items and help them get back to their owners.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#browse">Find an item <span>→</span></a>
+          <a class="button secondary" href="#report">Report an item</a>
+        </div>
+        <div class="trust-line"><span class="green-dot"></span> Built for students, by students</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a backpack and personal belongings">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-card card-top">✦ &nbsp; Small things matter</div>
+        <div class="bag"><div class="bag-handle"></div><div class="bag-pocket"></div><div class="bag-tag">CF</div></div>
+        <div class="float-card card-bottom"><span class="green-dot"></span> Reunited on campus</div>
+        <div class="spark spark-one">✳</div><div class="spark spark-two">✦</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="How CampusFind works">
+      <div><strong>01</strong><span>Report what you lost</span></div>
+      <div><strong>02</strong><span>Browse found items</span></div>
+      <div><strong>03</strong><span>Reconnect safely</span></div>
+    </section>
+
+    <section class="content-section" id="browse">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE COMMUNITY BOARD</span><h2>Recently reported</h2><p>Search the board or filter by item type.</p></div>
+        <a class="text-link" href="#report">+ Add a report</a>
+      </div>
+      <div class="filters">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search item or location..." aria-label="Search items"></label>
+        <div class="filter-buttons" role="group" aria-label="Filter items">
+          <button class="filter active" data-filter="All">All items</button>
+          <button class="filter" data-filter="Lost">Lost</button>
+          <button class="filter" data-filter="Found">Found</button>
+        </div>
+      </div>
+      <div id="itemsGrid" class="items-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>No matching reports yet. Try another search or add a report.</p>
+    </section>
+
+    <section class="report-section" id="report">
+      <div class="report-intro"><span class="eyebrow">HELP YOUR CAMPUS COMMUNITY</span><h2>Make a report.<br><em>Make a difference.</em></h2><p>Share the basic details so the right person can recognise their belongings.</p>
+        <div class="privacy-note"><span>ⓘ</span><p>For your safety, don't post phone numbers, home addresses, student IDs or other private information publicly. Arrange handover through your campus office.</p></div>
+      </div>
+      <form id="reportForm" class="report-form">
+        <div class="form-title"><h3>New item report</h3><span>All fields required</span></div>
+        <label>Item name<input name="name" maxlength="45" placeholder="e.g. Blue water bottle" required></label>
+        <div class="form-row">
+          <label>Report type<select name="type" required><option value="Lost">I lost this</option><option value="Found">I found this</option></select></label>
+          <label>Category<select name="category" required><option>Accessories</option><option>Electronics</option><option>Books & stationery</option><option>Clothing</option><option>Other</option></select></label>
+        </div>
+        <label>Last seen / found location<input name="location" maxlength="55" placeholder="e.g. Library, first floor" required></label>
+        <label>Date<input name="date" type="date" required></label>
+        <label>Short description<textarea name="description" maxlength="180" rows="3" placeholder="Add a detail that helps identify the item..." required></textarea></label>
+        <button class="button primary submit-button" type="submit">Publish report <span>→</span></button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+
+    <section class="how-section" id="how">
+      <span class="eyebrow">SIMPLE BY DESIGN</span><h2>How it works</h2>
+      <div class="how-grid">
+        <article><span class="step-number">01</span><h3>Post a report</h3><p>Add the item name, category, date and where it was last seen or found.</p></article>
+        <article><span class="step-number">02</span><h3>Search the board</h3><p>Use the search and Lost / Found filters to find matching reports.</p></article>
+        <article><span class="step-number">03</span><h3>Verify and reunite</h3><p>Contact your campus office or student help desk to arrange a safe handover.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-icon">⌕</span> CampusFind</a><span>A student-built campus utility · Demo project</span><span>© 2026 CampusFind</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
