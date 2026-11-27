@@ -1,1 +1,1 @@
-# CampusFind
+CampusFind is a web-based Lost and Found platform designed to help students report and recover misplaced belongings within their college campus. It provides a simple and accessible interface where users can browse found items and submit reports about lost or found belongings. The platform aims to make the process of reconnecting students with their belongings easier, faster, and more organized.
